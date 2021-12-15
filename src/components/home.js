@@ -76,8 +76,11 @@ function Home() {
     }, [totalBet])
 
     const handleReset = ()=>{
-        setTotalBet(initTotalBet);
-        setImgs(initImgs);
+    	if(!spinState) {
+        	setTotalBet(initTotalBet);
+        	setImgs(initImgs);
+        	setBetState(false);
+    	}
     }
 
     return (
